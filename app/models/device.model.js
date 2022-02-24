@@ -1,9 +1,9 @@
 module.exports = mongoose => {
   var schema = mongoose.Schema(
     {
-      title: String,
-      description: String,
-      published: Boolean
+      name: String,
+      price: Number,
+      id: String
     },
     { timestamps: true }
   );
@@ -14,6 +14,6 @@ module.exports = mongoose => {
     return object;
   });
 
-  const Tutorial = mongoose.model("tutorial", schema);
-  return Tutorial;
+  const Device = mongoose.model("device", schema);
+  return Device;
 };
